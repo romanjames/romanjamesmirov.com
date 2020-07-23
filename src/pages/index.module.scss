@@ -1,0 +1,138 @@
+.helloSection {
+  height: 100vh;
+  min-height: 15em;
+  padding: 1em;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    font-size: 3em;
+    animation: fade-in-first 1.6s forwards;
+  }
+
+  // "scroll down" text
+  h1 + p {
+    font-weight: normal;
+    margin: 1.5em 0 -1.5em;
+    animation: fade-in-second 4s forwards,
+      pulse 1s 4s infinite alternate-reverse;
+    /* prevent flicker at end of transition on macOS Safari */
+    backface-visibility: hidden;
+    perspective: 1000;
+    -webkit-font-smoothing: antialiased;
+    transform-style: preserve-3d;
+    transform: translateZ(0);
+  }
+}
+
+@keyframes fade-in-first {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-second {
+  0% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}
+
+.bioCardSection {
+  padding-right: 0.25em;
+  margin-bottom: calc(50vh - 5.5em);
+
+  // the actual card
+  & > div {
+    max-width: 30em;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding: 1em;
+    background-color: #fff;
+    border: 2px solid #000;
+    border-radius: 2px;
+    box-shadow: 0.5em 0.5em 1px rgba(0, 0, 0, 0.9);
+
+    @media (min-width: 450px) {
+      font-size: 1.6rem;
+    }
+
+    // profile image container
+    & > div:first-child {
+      margin-right: 1em;
+      width: 20%;
+
+      img {
+        max-width: 400px;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+      }
+    }
+
+    // bio text
+    & > div:last-child {
+      font-size: 1.2em;
+      width: 80%;
+      color: #000;
+
+      h3 {
+        padding-bottom: 0.5em;
+      }
+    }
+  }
+}
+
+@font-face {
+  font-family: Nunito;
+  src: url("../../static/Nunito-Regular.ttf");
+}
+
+.bigH2 {
+  font-size: 4em;
+  text-align: center;
+  text-shadow: 0 0.2em 1em rgba(0, 0, 0, 0.5);
+}
+
+.descriptionSection {
+  p {
+    margin: 1em auto 0;
+    max-width: 23em;
+    width: 100%;
+    font-family: Nunito;
+    line-height: 1.5;
+  }
+
+  img {
+    width: 10em;
+    float: right;
+    margin-top: -1em;
+  }
+}
+
+.socialWorkerBlogSection {
+  margin-top: calc(50vh - 10em);
+}
