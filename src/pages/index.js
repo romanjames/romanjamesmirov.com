@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react"
-import IndexLayout from "../components/IndexLayout"
+import IndexWrapper from "../components/IndexWrapper"
 import AOS from "aos"
 import styles from "./index.module.scss"
 import ProfileImage from "../../static/profile-400x400.jpg"
 import CodeThinkingImage from "../../static/code-thinking.svg"
+import BloggingImage from "../../static/blogging.svg"
 
 export default function Home() {
   useEffect(() => {
@@ -12,7 +13,7 @@ export default function Home() {
   }, [])
 
   return (
-    <IndexLayout>
+    <IndexWrapper>
       <section className={styles.helloSection}>
         <h1>hi! i am roman.</h1>
         <p>
@@ -46,7 +47,18 @@ export default function Home() {
         <h2 className={styles.bigH2}>
           here's one i created for a social worker
         </h2>
+        <div>
+          <i>☼</i>
+          <a href="#">allyseweaver.com</a>
+          <figure>
+            <div></div>
+            <figcaption>
+              Stories about people. From a long-time social worker.
+            </figcaption>
+          </figure>
+        </div>
+        <img src={BloggingImage} alt="Writing a blog post" />
       </section>
-    </IndexLayout>
+    </IndexWrapper>
   )
 }

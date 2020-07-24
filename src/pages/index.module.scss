@@ -1,5 +1,5 @@
 .helloSection {
-  height: 100vh;
+  height: 100%;
   min-height: 15em;
   padding: 1em;
   display: flex;
@@ -8,8 +8,12 @@
   align-items: center;
 
   h1 {
-    font-size: 3em;
+    font-size: 2.4em;
     animation: fade-in-first 1.6s forwards;
+
+    @media (min-width: 600px) {
+      font-size: 3em;
+    }
   }
 
   // "scroll down" text
@@ -112,9 +116,16 @@
 }
 
 .bigH2 {
-  font-size: 4em;
+  font-size: 3em;
   text-align: center;
-  text-shadow: 0 0.2em 1em rgba(0, 0, 0, 0.5);
+
+  @media (min-width: 600px) {
+    font-size: 3.6em;
+  }
+
+  @media (min-width: 1200px) {
+    font-size: 4.8em;
+  }
 }
 
 .descriptionSection {
@@ -134,5 +145,17 @@
 }
 
 .socialWorkerBlogSection {
+  clear: right;
   margin-top: calc(50vh - 10em);
+
+  // the overlapping link and figure
+  & > div {
+    float: right;
+
+    a {
+      display: inline-block;
+      padding: 1em;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+  }
 }
