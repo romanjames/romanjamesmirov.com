@@ -36,12 +36,14 @@ export default function Home() {
       </section>
       <section className={styles.descriptionSection}>
         <h2 className={styles.bigH2}>i build blogs.</h2>
-        <p>
-          designing and programming
-          <br /> websites from scratch
-          <br /> is my thing.
-        </p>
-        <img src={CodeThinkingImage} alt="Thinking about websites in code" />
+        <div>
+          <p>
+            designing and programming
+            <br /> websites from scratch
+            <br /> is my thing.
+          </p>
+          <img src={CodeThinkingImage} alt="Thinking about websites in code" />
+        </div>
       </section>
       <section className={styles.socialWorkerBlogSection}>
         <h2 className={styles.bigH2}>
