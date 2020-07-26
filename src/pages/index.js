@@ -50,14 +50,17 @@ export default function Home() {
           here's one i created for a social worker
         </h2>
         <div>
-          <i>☼</i>
-          <a href="#">allyseweaver.com</a>
-          <figure>
-            <div></div>
-            <figcaption>
-              Stories about people. From a long-time social worker.
-            </figcaption>
-          </figure>
+          <a href="#">
+            <i>☼</i>allyseweaver.com
+          </a>
+          <a href="#">
+            <figure>
+              <div></div>
+              <figcaption>
+                Stories about people. From a long-time social worker.
+              </figcaption>
+            </figure>
+          </a>
         </div>
         <img src={BloggingImage} alt="Writing a blog post" />
       </section>
