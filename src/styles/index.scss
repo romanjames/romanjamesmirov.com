@@ -1,0 +1,128 @@
+#index-page {
+  color: hsl(33, 10%, 98%);
+
+  h1,
+  h2 {
+    font-size: 3em;
+  }
+
+  h1.hello {
+    animation: fade-in-first 1.6s forwards;
+    min-height: 100%;
+    padding: 0 0.33333em;
+    // align vertically
+    display: flex;
+    align-items: center;
+  }
+
+  h2 {
+    margin-bottom: 0.4em;
+  }
+
+  section {
+    padding: 0 1em;
+  }
+
+  section.hand-wave {
+    text-align: center;
+  }
+
+  section.check-it-out {
+    margin: 5em 0;
+
+    div {
+      background-color: orange;
+      height: 60vw;
+    }
+
+    figcaption,
+    p {
+      margin-top: 0.8em;
+    }
+
+    a {
+      text-decoration: underline;
+    }
+  }
+
+  section.reach-out {
+    background-color: hsl(33, 10%, 10%);
+    padding: 2.5em 1em;
+
+    span {
+      color: hsl(33, 100%, 50%);
+    }
+
+    form {
+      display: flex;
+      flex-flow: column;
+
+      input,
+      textarea,
+      button {
+        margin-top: 1em;
+        font: inherit;
+        border: 1px solid hsl(33, 10%, 98%);
+        padding: 0.2em 0.4em;
+        color: inherit;
+        background-color: inherit;
+        border-radius: 0;
+
+        &:focus {
+          outline: none;
+          border-color: hsl(33, 100%, 50%);
+        }
+      }
+
+      button {
+        border-color: hsl(33, 100%, 50%);
+        background-color: hsl(33, 100%, 50%);
+        font-weight: bold;
+
+        &:focus {
+          border-color: hsl(33, 10%, 98%);
+          background-color: hsl(33, 10%, 98%);
+          color: hsl(33, 100%, 50%);
+        }
+      }
+    }
+  }
+}
+
+@font-face {
+  font-family: Nunito;
+  src: url("../../static/Nunito-Regular.ttf");
+}
+
+@keyframes fade-in-first {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-second {
+  0% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}
