@@ -1,5 +1,9 @@
+$white: hsl(33, 10%, 98%);
+$orange: hsl(33, 100%, 50%);
+$black: hsl(33, 10%, 10%);
+
 #index-page {
-  color: hsl(33, 10%, 98%);
+  color: $white;
 
   h1,
   h2 {
@@ -21,14 +25,18 @@
 
   section {
     padding: 0 1em;
+    margin: 5em 0;
   }
 
   section.hand-wave {
     text-align: center;
   }
 
-  section.check-it-out {
-    margin: 5em 0;
+  section.check-it-out,
+  section.portfolio-continued {
+    figure {
+      margin-top: 3em;
+    }
 
     div {
       background-color: orange;
@@ -46,11 +54,11 @@
   }
 
   section.reach-out {
-    background-color: hsl(33, 10%, 10%);
+    background-color: $black;
     padding: 2.5em 1em;
 
     span {
-      color: hsl(33, 100%, 50%);
+      color: $orange;
     }
 
     form {
@@ -62,7 +70,7 @@
       button {
         margin-top: 1em;
         font: inherit;
-        border: 1px solid hsl(33, 10%, 98%);
+        border: 1px solid $white;
         padding: 0.2em 0.4em;
         color: inherit;
         background-color: inherit;
@@ -70,21 +78,61 @@
 
         &:focus {
           outline: none;
-          border-color: hsl(33, 100%, 50%);
+          border-color: $orange;
         }
       }
 
       button {
-        border-color: hsl(33, 100%, 50%);
-        background-color: hsl(33, 100%, 50%);
+        border-color: $white;
+        color: $white;
         font-weight: bold;
 
         &:focus {
-          border-color: hsl(33, 10%, 98%);
-          background-color: hsl(33, 10%, 98%);
-          color: hsl(33, 100%, 50%);
+          border-color: $white;
+          background-color: $white;
+          color: $black;
         }
       }
+
+      &:valid button {
+        border-color: $orange;
+        background-color: $orange;
+
+        &:focus {
+          border-color: $white;
+          background-color: $white;
+          color: $orange;
+        }
+      }
+    }
+  }
+
+  footer {
+    background: $black;
+    padding: 1em;
+
+    .back-to-top {
+      display: inline-block;
+      margin: 0 0 0 calc(50% - 0.5em);
+    }
+
+    a {
+      font-size: 1.5em;
+    }
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    li {
+      list-style-type: none;
+      margin: 1em 1em 0 0;
+    }
+
+    p {
+      margin-top: 1em;
     }
   }
 }

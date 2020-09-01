@@ -1,6 +1,20 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faChevronCircleUp } from "@fortawesome/free-solid-svg-icons"
+import {
+  faTwitter,
+  faGithub,
+  faLinkedinIn,
+  faYoutube,
+  faInstagram,
+  faCodepen,
+  faMediumM,
+  faFacebookF,
+  faPinterestP,
+} from "@fortawesome/free-brands-svg-icons"
+
 import ProfileImage from "../../static/profile-400x400.jpg"
 import CodeThinkingImage from "../../static/code-thinking.svg"
 import BloggingImage from "../../static/blogging.svg"
@@ -42,67 +56,129 @@ export default function Home() {
           every social network.
           <br />
           <br />
-          You can also reach me here:{" "}
+          You can also reach me here:
         </p>
         <form action="post">
-          <input type="email" name="email" placeholder="Your email" />
-          <textarea name="message" rows="10" placeholder="Message"></textarea>
+          <input type="email" name="email" placeholder="Your email" required />
+          <textarea
+            name="message"
+            rows="10"
+            placeholder="Message"
+            required
+          ></textarea>
           <button type="submit">Send</button>
         </form>
       </section>
 
-      <section className="showcase">
-        <h2>...my portfolio also includes</h2>
-        <div>
+      <section className="portfolio-continued">
+        <h2>My portfolio also includes:</h2>
+        <figure>
           <a href="#">
-            <i>☼</i>staysafesacramento.com
+            <div></div>
           </a>
+          <figcaption>
+            After COVID-19 was declared a pandemic, I made this platform to
+            connect people who need supplies with people who have them.
+          </figcaption>
+        </figure>
+        <p>
+          You can make a fake account to try it out at{" "}
+          <a href="#">staysafesacramento.com</a>
+        </p>
+
+        <figure>
           <a href="#">
-            <figure>
-              <div></div>
-              <figcaption>
-                a pandemic relief platform to connect people who have and people
-                who need
-              </figcaption>
-            </figure>
+            <div></div>
           </a>
-        </div>
-        <div>
+          <figcaption>
+            Not a blog, but a blogging platform for anyone and everyone. I love
+            platforms. This is my earliest project listed here.
+          </figcaption>
+        </figure>
+        <p>
+          Go ahead, make a test account and post something at{" "}
+          <a href="#">fathomless-island-56591.herokuapp.com</a>
+        </p>
+
+        <figure>
           <a href="#">
-            "blogster"<i>☼</i>
+            <div></div>
           </a>
-          <a href="#">
-            <figure>
-              <div></div>
-              <figcaption>
-                a minimalist... you guessed it... blogging platform. go ahead,
-                make a test account and post something.
-              </figcaption>
-            </figure>
-          </a>
-        </div>
-        <div>
-          <a href="#">
-            <i>☼</i>"impetus"
-          </a>
-          <a href="#">
-            <figure>
-              <div></div>
-              <figcaption>
-                toggle on and off the tasks you do throughout the day and see
-                auto-generated charts showing where your time goes
-              </figcaption>
-            </figure>
-          </a>
-        </div>
+          <figcaption>
+            A task tracker that graphs your activity over time. Just add your
+            tasks, toggle them on and off throughout the day, and see what your
+            graph has to reveal about you!
+          </figcaption>
+        </figure>
+        <p>
+          Try doing it for one whole week at{" "}
+          <a href="#">romanjamesmirov-impetus.herokuapp.com</a>
+        </p>
       </section>
+
+      <section>
+        <h2>Curious about coding?</h2>
+        <p>Well I have a blog for you!</p>
+        <p>(coming soon)</p>
+      </section>
+
+      <section>
+        <h2>And finally, some doodles.</h2>
+        <p>(coming soon)</p>
+      </section>
+
       <footer>
-        <a href="#">go back up</a>
-        <div>
-          twitter github linkedin youtube instagram codepen medium facebook
-          pinterest
-        </div>
-        <p>© Roman Mirov 2020</p>
+        <a className="back-to-top" href="#">
+          <FontAwesomeIcon icon={faChevronCircleUp} />
+        </a>
+        <ul>
+          <li>
+            <a className="twitter" href="#">
+              <FontAwesomeIcon icon={faTwitter} />
+            </a>
+          </li>
+          <li>
+            <a className="github" href="#">
+              <FontAwesomeIcon icon={faGithub} />
+            </a>
+          </li>
+          <li>
+            <a className="linkedin" href="#">
+              <FontAwesomeIcon icon={faLinkedinIn} />
+            </a>
+          </li>
+          <li>
+            <a className="youtube" href="#">
+              <FontAwesomeIcon icon={faYoutube} />
+            </a>
+          </li>
+          <li>
+            <a className="instagram" href="#">
+              <FontAwesomeIcon icon={faInstagram} />
+            </a>
+          </li>
+          <li>
+            <a className="codepen" href="#">
+              <FontAwesomeIcon icon={faCodepen} />
+            </a>
+          </li>
+          <li>
+            <a className="medium" href="#">
+              <FontAwesomeIcon icon={faMediumM} />
+            </a>
+          </li>
+          <li>
+            <a className="facebook" href="#">
+              <FontAwesomeIcon icon={faFacebookF} />
+            </a>
+          </li>
+          <li>
+            <a className="pinterest" href="#">
+              <FontAwesomeIcon icon={faPinterestP} />
+            </a>
+          </li>
+        </ul>
+        <p>© Roman James 2020</p>
       </footer>
     </div>
   )
