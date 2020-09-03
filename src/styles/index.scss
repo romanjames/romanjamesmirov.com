@@ -83,19 +83,20 @@ $black: hsl(33, 10%, 10%);
       }
 
       button {
-        border-color: $white;
-        color: $white;
+        border-color: darken($white, 50%);
+        color: darken($white, 50%);
         font-weight: bold;
 
         &:focus {
-          border-color: $white;
-          background-color: $white;
+          border-color: darken($white, 50%);
+          background-color: darken($white, 50%);
           color: $black;
         }
       }
 
       &:valid button {
         border-color: $orange;
+        color: $white;
         background-color: $orange;
 
         &:focus {
@@ -111,13 +112,17 @@ $black: hsl(33, 10%, 10%);
     background: $black;
     padding: 1em;
 
+    a {
+      font-size: 1.5em;
+    }
+
     .back-to-top {
       display: inline-block;
       margin: 0 0 0 calc(50% - 0.5em);
-    }
-
-    a {
-      font-size: 1.5em;
+      scroll-behavior: smooth;
+      color: inherit;
+      background-color: transparent;
+      border: none;
     }
 
     ul {

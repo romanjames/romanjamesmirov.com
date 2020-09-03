@@ -15,10 +15,6 @@ import {
   faPinterestP,
 } from "@fortawesome/free-brands-svg-icons"
 
-import ProfileImage from "../../static/profile-400x400.jpg"
-import CodeThinkingImage from "../../static/code-thinking.svg"
-import BloggingImage from "../../static/blogging.svg"
-
 export default function Home() {
   return (
     <div id="index-page">
@@ -52,11 +48,11 @@ export default function Home() {
       <section className="reach-out">
         <h2>I'm a developer of blogs.</h2>
         <p>
-          Would you like one for yourself? I'm <span>@romanjamesdev</span> on
-          every social network.
+          Would you like one for yourself? You can find me anywhere as{" "}
+          <span>@romanthecoder</span>.
           <br />
           <br />
-          You can also reach me here:
+          You can also reach out to me right now, right here:
         </p>
         <form action="post">
           <input type="email" name="email" placeholder="Your email" required />
@@ -87,7 +83,7 @@ export default function Home() {
         </p>
 
         <figure>
-          <a href="#">
+          <a href="https://fathomless-island-56591.herokuapp.com">
             <div></div>
           </a>
           <figcaption>
@@ -97,11 +93,13 @@ export default function Home() {
         </figure>
         <p>
           Go ahead, make a test account and post something at{" "}
-          <a href="#">fathomless-island-56591.herokuapp.com</a>
+          <a href="https://fathomless-island-56591.herokuapp.com">
+            fathomless-island-56591.herokuapp.com
+          </a>
         </p>
 
         <figure>
-          <a href="#">
+          <a href="https://romanjamesmirov-impetus.herokuapp.com">
             <div></div>
           </a>
           <figcaption>
@@ -112,7 +110,9 @@ export default function Home() {
         </figure>
         <p>
           Try doing it for one whole week at{" "}
-          <a href="#">romanjamesmirov-impetus.herokuapp.com</a>
+          <a href="https://romanjamesmirov-impetus.herokuapp.com">
+            romanjamesmirov-impetus.herokuapp.com
+          </a>
         </p>
       </section>
 
@@ -133,47 +133,53 @@ export default function Home() {
         </a>
         <ul>
           <li>
-            <a className="twitter" href="#">
+            <a className="twitter" href="https://twitter.com/romanthecoder">
               <FontAwesomeIcon icon={faTwitter} />
             </a>
           </li>
           <li>
-            <a className="github" href="#">
+            <a className="github" href="https://github.com/romanthecoder">
               <FontAwesomeIcon icon={faGithub} />
             </a>
           </li>
           <li>
-            <a className="linkedin" href="#">
+            <a
+              className="linkedin"
+              href="https://linkedin.com/in/romanthecoder"
+            >
               <FontAwesomeIcon icon={faLinkedinIn} />
             </a>
           </li>
           <li>
-            <a className="youtube" href="#">
+            <a
+              className="youtube"
+              href="https://youtube.com/channel/UCzkfrozI02VOo53YzCg4tAw"
+            >
               <FontAwesomeIcon icon={faYoutube} />
             </a>
           </li>
           <li>
-            <a className="instagram" href="#">
+            <a className="instagram" href="https://instagram.com/romanthecoder">
               <FontAwesomeIcon icon={faInstagram} />
             </a>
           </li>
           <li>
-            <a className="codepen" href="#">
+            <a className="codepen" href="https://codepen.io/romanthecoder">
               <FontAwesomeIcon icon={faCodepen} />
             </a>
           </li>
           <li>
-            <a className="medium" href="#">
+            <a className="medium" href="https://medium.com/@romanthecoder">
               <FontAwesomeIcon icon={faMediumM} />
             </a>
           </li>
           <li>
-            <a className="facebook" href="#">
+            <a className="facebook" href="https://facebook.com/romanthecoder">
               <FontAwesomeIcon icon={faFacebookF} />
             </a>
           </li>
           <li>
-            <a className="pinterest" href="#">
+            <a className="pinterest" href="https://pinterest.com/romanthecoder">
               <FontAwesomeIcon icon={faPinterestP} />
             </a>
           </li>
